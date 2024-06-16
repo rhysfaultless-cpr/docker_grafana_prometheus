@@ -2,6 +2,8 @@
 
 ## reference
 -   [Docker's example](https://github.com/docker/awesome-compose/tree/master/prometheus-grafana)
+-   [Provisioning Grafana](https://grafana.com/docs/grafana/latest/administration/provisioning/#dashboards)
+-   [Example Compose file, with Grafana folder structure](https://github.com/grafana/agent/blob/main/example/docker-compose/docker-compose.yaml)
 
 ## first time use
 1.  Install [Docker Engine](https://docs.docker.com/engine/install/) on an Ubuntu 22.04 machine.
