@@ -16,12 +16,13 @@ services:
     ports:
       - 3000:3000
     restart: unless-stopped
-    environment:
-      - GF_SECURITY_ADMIN_USER=administrator
-      - GF_SECURITY_ADMIN_PASSWORD=clearpath
     volumes:
       - ./grafana/datasources:/etc/grafana/provisioning/datasources
       - ./grafana/dashboards-provisioning:/etc/grafana/provisioning/dashboards
       - ./grafana/dashboards:/var/lib/grafana/dashboards
+    environment:
+      - GF_SECURITY_ADMIN_USER=administrator
+      - GF_SECURITY_ADMIN_PASSWORD=clearpath
+      - GF_USERS_DEFAULT_THEME=light
 volumes:
   prom_data:
