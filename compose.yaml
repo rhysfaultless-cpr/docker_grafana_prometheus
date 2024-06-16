@@ -20,6 +20,8 @@ services:
       - GF_SECURITY_ADMIN_USER=administrator
       - GF_SECURITY_ADMIN_PASSWORD=clearpath
     volumes:
-      - ./grafana:/etc/grafana/provisioning/datasources
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/dashboards-provisioning:/etc/grafana/provisioning/dashboards
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
 volumes:
   prom_data:
