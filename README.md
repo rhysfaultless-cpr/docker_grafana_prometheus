@@ -29,6 +29,6 @@
 ## user interfaces
 -   Prometheus will be available at [http://localhost:9090/](http://localhost:9090/)
 -   Grafana will be available at [http://localhost:3000/](http://localhost:3000/)
-    -   username: _admin_
-    -   password: _grafana_
+    -   username: _administrator_
+    -   password: _clearpath_
     -  _note: these can be changed in the file compose.yaml_ 
