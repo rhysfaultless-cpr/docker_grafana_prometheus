@@ -1,0 +1,32 @@
+# example prometheus.yml file available at:
+# https://github.com/prometheus/prometheus/blob/main/documentation/examples/prometheus.yml
+
+# my global config
+global:
+  scrape_interval: 15s 	   # The default is 1 minute.
+  evaluation_interval: 15s # The default is 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+          #
+          # Note: I have not configured Alert Manager
+
+
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+  #
+  # Note: I have not added any rules
+
+
+scrape_configs:
+  - job_name: "prometheus"
+
+    static_configs:
+      - targets: ["localhost:9090"]
+
