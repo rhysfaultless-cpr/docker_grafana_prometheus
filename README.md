@@ -1,34 +1,34 @@
 # docker_grafana_prometheus
 
+## reference
+-   [Docker's example](https://github.com/docker/awesome-compose/tree/master/prometheus-grafana)
+
 ## first time use
 1.  Install [Docker Engine](https://docs.docker.com/engine/install/) on an Ubuntu 22.04 machine.
 2.  Clone this repository.
 3.  In terminal, navigate to the local reopsitory directory.
-4.  Install and run the Prometheus Image:
+4.  Run:
     ```
-    sudo bash prometheus_install_image.sh
-    ```
-5.  Install and run the Grafana Image:
-    ```
-    sudo bash grafana_install_image.sh
+    docker compose up -d
     ```
 
-## starting and stopping, after fist time use
--   Prometheus
+## commands
+-   Starting:
     ```
-    sudo docker start prometheus
+    docker compose up -d
     ```
+-   Shutdown:
     ```
-    sudo docker stop prometheus
+    docker compose down
     ```
--   Grafana
+-   Shutdown, and delete all Prometheus data:
     ```
-    sudo docker start grafana
-    ```
-    ```
-    sudo docker stop grafana
+    docker compose down -v
     ```
 
 ## user interfaces
 -   Prometheus will be available at [http://localhost:9090/](http://localhost:9090/)
 -   Grafana will be available at [http://localhost:3000/](http://localhost:3000/)
+    -   username: _admin_
+    -   password: _grafana_
+    -  _note: these can be changed in the file compose.yaml_ 
